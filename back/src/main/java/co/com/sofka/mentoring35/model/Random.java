@@ -1,4 +1,4 @@
-package co.com.sofka.mentoring35;
+package co.com.sofka.mentoring35.model;
 
 import java.util.Date;
 
@@ -7,24 +7,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Random {
-    private Date date;
     @Id
     private String id;
+    private String card1;
+    private String card2;
 
-    private String orginalList;
-
-    private String randomList;
-
-    public String getRandomList() {
-        return randomList;
+    public Random() {
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    public Random(String card1, String card2) {
+        this.card1 = card1;
+        this.card2 = card2;
     }
 
     public String getId() {
@@ -35,18 +28,19 @@ public class Random {
         this.id = id;
     }
 
-
-    public String getOrginalList() {
-        return orginalList;
+    public String getCard1() {
+        return card1;
     }
 
-    public void setOrginalList(String orginalList) {
-        this.orginalList = orginalList;
+    public void setCard1(String card1) {
+        this.card1 = card1;
     }
 
-    public void setRandomList(String randomList) {
-        this.randomList = randomList;
+    public String getCard2() {
+        return card2;
     }
 
-    
+    public void setCard2(String card2) {
+        this.card2 = card2;
+    }
 }

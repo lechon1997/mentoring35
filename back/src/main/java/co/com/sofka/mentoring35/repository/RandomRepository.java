@@ -1,7 +1,11 @@
-package co.com.sofka.mentoring35;
+package co.com.sofka.mentoring35.repository;
 
+import co.com.sofka.mentoring35.model.Random;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface RandomRepository extends ReactiveCrudRepository<Random, String> {
+@Repository
+public interface RandomRepository extends ReactiveMongoRepository<Random, String> {
     
 }

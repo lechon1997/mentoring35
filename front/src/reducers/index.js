@@ -22,12 +22,20 @@ function view(state = {
 }
 
 function random(state = {
-    result: {}
+    result: []
 }, action) {
     switch (action.type) {
         case "random-result": {
             return { result: action.data }
         }
+
+        case "nueva-mano": {
+            const nuevoState = state.result;
+            nuevoState.push(action.data)
+            return {...state, result: nuevoState};
+        }
+
+        
         default: return state
     }
 }

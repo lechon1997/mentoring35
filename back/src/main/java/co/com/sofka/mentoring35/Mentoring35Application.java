@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Mentoring35Application {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(Mentoring35Application.class, args);
 	}
+
+
 
 }
